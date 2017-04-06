@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.github.creatorbe.helloworld">
+
+    <!--walaupun aplikasi yang dibuat tidak membutuhkan akses internet tapi ini adalah contoh penerapannya-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--pemasangan hak akses internet pada aplikasi di luar tag application-->
+
+    <!--gambar ikon aplikasi diambil dari folder res/mipmap -->
+    <!--label adalah nama aplikasi yang di passing dari string key app_name-->
+    <!--theme bisa dirubah pada folder values/styles.xml-->
+    <!--intent action main, category launcher mendeklarasikan MainActivity adalah file utama saat aplikasi di jalankan-->
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main2Activity">
+            <!--tambah tag navigasi button home -->
+            <!--di contoh proyek kali ini tidak begitu riskan dikarenakan mempunyai 1 home/beranda-->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+    </application>
+
+</manifest>

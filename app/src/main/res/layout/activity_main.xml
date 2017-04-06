@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--pakai layout linear untuk menampilkan semua komponen dalam bentuk sejajar-->
+<!--Anda bisa memilih layout mendatar/horizontal atau dalam bentuk vertikal-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="io.github.creatorbe.helloworld.MainActivity">
+
+    <!--menampilkan text dalam bentuk inline code-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Assalamualaikum" />
+
+    <!--menampilkan text dengan memanggil value dari variabel tag-->
+    <!--string di folder values/strings-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tag" />
+
+    <!--menampilkan gambar dari folder res/drawable-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/banner"/>
+
+    <!--layout linear baru dengan orientasi horizontal-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+
+        <!--edittext komponen dalam android semacam placeholder-->
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:hint="@string/comment"
+            android:inputType="textPersonName"/>
+
+        <!--contoh menampilkan tombol dalam android-->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/button_send" />
+
+        <Button
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/like"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hello World</string>
+    <string name="tag">Belajar koding android itu mudah, ayo coba!</string>
+    <string name="comment">Komentari</string>
+    <string name="button_send">Kirim</string>
+    <string name="like">Like</string>
+</resources>
